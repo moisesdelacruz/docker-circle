@@ -13,20 +13,20 @@ jobs:
       - run: echo "Do some things"
 
       - run:
-        name: Installing Docker
-        command: |
-          set -x
-          curl -fsSL https://get.docker.com -o get-docker.sh
-          DRY_RUN=1 sh ./get-docker.sh
-          sh get-docker.sh
+          name: Installing Docker
+          command: |
+            set -x
+            curl -fsSL https://get.docker.com -o get-docker.sh
+            DRY_RUN=1 sh ./get-docker.sh
+            sh get-docker.sh
 
       - run:
-        name: Checking Docker Version
-        command: docker --version
+          name: Checking Docker Version
+          command: docker --version
 
       - run:
-        name: Checking Linux Version
-        command: |
-          cat /etc/os-release
-          echo ".\n.\n.\n"
-          uname -a
+          name: Checking Linux Version
+          command: |
+            cat /etc/os-release
+            echo ".\n.\n.\n"
+            uname -a
